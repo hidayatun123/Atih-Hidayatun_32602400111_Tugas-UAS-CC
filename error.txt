@@ -1,0 +1,26 @@
+
+   INFO  Running migrations.  
+
+  2026_07_13_124031_create_carts_table .................................................. 14.36ms FAIL
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'carts' already exists (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: agrismart, SQL: create table `carts` (`id` bigint unsigned not null auto_increment primary key, `user_id` bigint unsigned not null, `product_id` bigint unsigned not null, `quantity` int not null default '1', `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci')
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:857
+    [90m853[0m[90m▕ [0m[35;1m            [0m[39;1m$exceptionType [0m[35;1m= ([0m[39;1m$isUniqueConstraintError [0m[35;1m= [0m[39;1m$this[0m[35;1m->[0m[39;1misUniqueConstraintError[0m[35;1m([0m[39;1m$e[0m[35;1m))[0m
+    [90m854[0m[90m▕ [0m[35;1m                ? [0m[39;1mUniqueConstraintViolationException[0m[35;1m::class[0m
+    [90m855[0m[90m▕ [0m[35;1m                : [0m[39;1mQueryException[0m[35;1m::class;[0m
+    [90m856[0m[90m▕ [0m
+[31;1m  ➜ [0m[3;1m857[0m[90m▕ [0m[35;1m            [0m[39;1m$exception [0m[35;1m= new [0m[39;1m$exceptionType[0m[35;1m([0m
+    [90m858[0m[90m▕ [0m[35;1m                [0m[39;1m$this[0m[35;1m->[0m[39;1mgetNameWithReadWriteType[0m[35;1m(),[0m
+    [90m859[0m[90m▕ [0m[35;1m                [0m[39;1m$query[0m[35;1m,[0m
+    [90m860[0m[90m▕ [0m[35;1m                [0m[39;1m$this[0m[35;1m->[0m[39;1mprepareBindings[0m[35;1m([0m[39;1m$bindings[0m[35;1m),[0m
+    [90m861[0m[90m▕ [0m[35;1m                [0m[39;1m$e[0m[35;1m,[0m
+
+  1   vendor\laravel\framework\src\Illuminate\Database\Connection.php:601
+      PDOException::("SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'carts' already exists")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:601
+      PDOStatement::execute()
+

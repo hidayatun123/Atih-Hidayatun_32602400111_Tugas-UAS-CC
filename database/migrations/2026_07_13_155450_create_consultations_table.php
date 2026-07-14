@@ -16,9 +16,8 @@ return new class extends Migration
                   ->cascadeOnDelete();
 
             $table->string('title');
-
             $table->text('question');
-
+            $table->string('image')->nullable();
             $table->text('answer')->nullable();
 
             $table->enum('status', [
